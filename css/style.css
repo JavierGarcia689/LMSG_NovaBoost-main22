@@ -1,0 +1,395 @@
+@import url('https://fonts.googleapis.com/css2?family=Cal+Sans&family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+
+* {
+  font-family: "Lora", serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: black;
+  color: white;
+}
+
+/* ---------------- HEADER ---------------- */
+
+header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background: white;
+  gap: 20px;
+}
+
+header img {
+  width: 100%;
+  max-width: 250px;
+  height: auto;
+}
+
+header nav {
+  display: flex;
+  align-items: center;
+}
+
+header nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  list-style: none;
+}
+
+/* ---------------- MENÚ ---------------- */
+
+.menu > li {
+  position: relative;
+}
+
+.menu a {
+  display: block;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  font-family: "Cal Sans", sans-serif;
+  transition: 0.3s;
+  text-transform: uppercase;
+  font-size: 1em;
+}
+
+.menu a:hover {
+  background-color: black;
+  color: white;
+}
+
+/* Submenú */
+.submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  list-style: none;
+  background-color: white;
+  padding: 20px 0;
+  box-shadow: 0px 4px 8px skyblue;
+  min-width: 220px;
+  z-index: 999;
+  border-radius: 10px;
+}
+
+.menu li:hover > .submenu {
+  display: block;
+}
+
+.submenu li a {
+  padding: 10px 20px;
+  color: black;
+  text-decoration: none;
+  display: block;
+  border-radius: 10px;
+  font-weight: normal;
+}
+
+/* ---------------- MAIN ---------------- */
+
+main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px;
+  flex-wrap: wrap;
+}
+
+main h2 {
+  font-size: 6em;
+  text-transform: uppercase;
+  color: white;
+  flex: 1 1 100%;
+  text-align: center;
+}
+
+main .textoP {
+  flex: 1 1 60%;
+}
+
+main .textoP p,
+main .textoP li {
+  font-size: 2em;
+  line-height: 1.5;
+  font-family: "Cal Sans", sans-serif;
+  font-weight: 200;
+  margin-bottom: 20px;
+}
+
+aside {
+  flex: 1 1 30%;
+  text-align: center;
+  padding: 20px;
+}
+
+aside img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ---------------- FOOTER ---------------- */
+
+footer {
+  background-color: white;
+  color: black;
+  text-align: center;
+  padding: 20px;
+  font-family: "Lora", serif;
+  margin-top: 40px;
+}
+
+/* ---------------- FORMULARIO ---------------- */
+
+main.contacto-main {
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  background-color: black;
+  z-index: 1;
+}
+
+.contacto {
+  background: white;
+  color: black;
+  padding: 30px;
+  border-radius: 10px;
+  max-width: 600px;
+  width: 100%;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+}
+
+.contacto h2 {
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 20px;
+  font-family: "Cal Sans", sans-serif;
+  color: black;
+}
+
+.contacto form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contacto fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.contacto label {
+  display: block;
+  margin-top: 10px;
+  font-weight: 500;
+}
+
+.contacto input,
+.contacto select,
+.contacto textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1em;
+  font-family: inherit;
+}
+
+.contacto button {
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 10px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background 0.3s;
+}
+
+.contacto button:hover {
+  background-color: #333;
+}
+
+.botones-form {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.botones-form button {
+  flex: 1;
+}
+
+/* ---------------- QUIÉNES SOMOS / SERVICIOS ---------------- */
+
+body.quienes,
+body.servicios {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background-color: #c6bdbd;
+  color: #333;
+}
+
+section {
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+#quienes-somos h2,
+#servicios h2 {
+  text-align: center;
+  font-size: 2.8em;
+  margin-bottom: 20px;
+  color: #2c3e50;
+}
+
+#quienes-somos h3,
+#servicios h3 {
+  font-size: 1.5em;
+  margin-top: 0;
+}
+
+#servicios p {
+  text-align: center;
+  max-width: 700px;
+  margin: auto;
+  font-size: 1.1em;
+  color: #555;
+}
+
+.servicios-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.servicio {
+  flex: 1 1 250px;
+  max-width: 300px;
+  background: #f7f7f7;
+  padding: 20px;
+  border-radius: 10px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.servicio:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+#quienes-somos {
+  background-color: #ecf0f1;
+}
+
+.somos-contenido {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.somos-texto {
+  flex: 1 1 300px;
+  max-width: 500px;
+  font-size: 1.1em;
+  line-height: 1.6;
+}
+
+.somos-img {
+  flex: 1 1 300px;
+  max-width: 400px;
+}
+
+.somos-img img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* ---------------- RESPONSIVE ---------------- */
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+
+  header nav ul.menu {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  header nav li {
+    margin: 10px 0;
+  }
+
+  .submenu {
+    position: static;
+    box-shadow: none;
+    background-color: white;
+    padding: 0;
+  }
+
+  .submenu li a {
+    padding: 10px 20px;
+  }
+
+  main {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+  }
+
+  main h2 {
+    font-size: 3em;
+  }
+
+  main .textoP p,
+  main .textoP li {
+    font-size: 1.5em;
+  }
+
+  .servicios-grid,
+  .somos-contenido {
+    flex-direction: column;
+  }
+
+  .servicio,
+  .somos-texto,
+  .somos-img {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  main h2 {
+    font-size: 2em;
+  }
+
+  main .textoP p,
+  main .textoP li {
+    font-size: 1.2em;
+  }
+
+  header img {
+    max-width: 180px;
+  }
+}
